@@ -29,9 +29,18 @@ export const Editor1 = (props) => {
       <Threegrid option={option2} />
       <Threegrid option={option2} />
       </SplitPane> */}
-      <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
-        
+
+<SplitPane split="horizontal">
+<Threegrid/>
+
+      <SplitPane>
+        <div><Twogrid/></div>
+        <div> <Twogrid/></div>
       </SplitPane>
+      
+    
+      </SplitPane>
+      
 
     </div>
   );
