@@ -6,6 +6,7 @@ import SplitPane from "react-split-pane";
 import Split from "react-split";
 let option1="horizontal";
 let option2="vertical";
+
 export const Editor1 = (props) => {
   return (
     <div>
@@ -18,7 +19,7 @@ export const Editor1 = (props) => {
          <Threegrid option={option2} /> 
       }  */}
       {/* props==4 */}
-     {/* <SplitPane split={option2}  defaultSize="300px" minSize={-1} maxSize="33.3%">
+      {/* <SplitPane split={option2}  defaultSize="300px" minSize={-1} maxSize="33.3%">
      <Twogrid option={option2} /> 
      <Twogrid option={option1} /> 
       </SplitPane> */}
@@ -28,6 +29,7 @@ export const Editor1 = (props) => {
       <Twogrid option={option2} /> 
       <Threegrid option={option2} />
       </SplitPane> */}
+      {/* 6 count */}
       {/* <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
       <Threegrid option={option2} />
       <Threegrid option={option2} />
@@ -67,6 +69,7 @@ export const Editor1 = (props) => {
 
       {/* 10 count */}
            
+
 
     </div>
   );
