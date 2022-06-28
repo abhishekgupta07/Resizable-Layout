@@ -1,28 +1,38 @@
 import React from "react";
 import "./style.css";
+import Twogrid from "./Twogrid";
+import Threegrid from "./Threegrid"
 import SplitPane from "react-split-pane";
-import logo from "./logoo.png";
-export const Editor1 = () => {
+let option1="horizontal";
+let option2="vertical";
+export const Editor1 = (props) => {
   return (
     <div>
-
-      <SplitPane split="vertical" defaultSize="500px" minSize={0} maxSize="100%" >        
-          <SplitPane split="horizontal" width="50%" minSize={5} defaultSize="50%" maxSize="100%" >
-          <div style={{backgorundwidth: "100%", height: "100%", backgroundColor: "white"}}>layout1 <img src={logo} alt="logo" width="auto" height="auto" /></div>
-          <div style={{backgorundwidth: "100%", height: "100%",width: "100%" , backgroundColor: "#818589"}}>layout4 <img src={logo} alt="logo" width="auto" height="auto" /></div>
-          </SplitPane>
+      {/* twogrids option */}
+      {/* if(props==2){
+       <Twogrid option={option2} /> 
+      }*/}
+      {/* threegrids option */}
+      {/* {
+         <Threegrid option={option2} /> 
+      }  */}
+      {/* props==4 */}
+     {/* <SplitPane split={option2}  defaultSize="300px" minSize={-1} maxSize="33.3%">
+     <Twogrid option={option2} /> 
+     <Twogrid option={option1} /> 
+      </SplitPane> */}
+      {/* <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
+      <Twogrid option={option2} /> 
+      <Threegrid option={option2} />
+      </SplitPane> */}
+      {/* <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
+      <Threegrid option={option2} />
+      <Threegrid option={option2} />
+      </SplitPane> */}
+      <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
         
-      
-
-        <SplitPane split="horizontal"  defaultSize="300px" minSize={-1} maxSize="33.3%">
-          <div style={{width: "100%", height: "100%", backgroundColor: "#484848",}}>layout2 <img src={logo} alt="logo" width="auto" height="auto" /></div>
-          <SplitPane defaultSize="300px"  split="horizontal" minSize={5}>
-          <div style={{width: "100%", height: "100%", backgroundColor: "#36454F",}}>layout5 <img src={logo} alt="logo" /></div>
-          <div style={{width: "100%", height: "100%", backgroundColor: "#A0A0A0",}}>layout3<img src={logo} alt="logo" /></div>
-          </SplitPane>
-        </SplitPane>
-
       </SplitPane>
+
     </div>
   );
 };
