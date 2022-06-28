@@ -42,6 +42,20 @@ export const Editor1 = (props) => {
       </SplitPane>
       </SplitPane> */}
 
+{/* 8 count */}
+<SplitPane split="horizontal">
+
+  <SplitPane>
+    <div><Twogrid/></div>
+    <div><Twogrid/></div>
+  </SplitPane>
+  <SplitPane>
+    <div><Twogrid/></div>
+    <div><Twogrid/></div>
+  </SplitPane>
+</SplitPane>
+
+
       {/* 9 count */}
       {/* <SplitPane split="horizontal">
         <Threegrid/>
@@ -52,10 +66,7 @@ export const Editor1 = (props) => {
       </SplitPane> */}
 
       {/* 10 count */}
-      <SplitPane split="horizontal">
-        
-        
-        </SplitPane>      
+           
 
     </div>
   );
