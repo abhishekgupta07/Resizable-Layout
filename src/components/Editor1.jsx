@@ -6,21 +6,41 @@ import SplitPane from "react-split-pane";
 import Split from "react-split";
 let option1 = "horizontal";
 let option2 = "vertical";
-// let defaultsize = "600px";
-export const Editor1 = (props) => {
+// let size = "600px";
+export const Editor1 = () => {
   return (
     <div>
+
+
       {/* twogrids option */}
-      {/* if(props==2){
-       <Twogrid option={option2} /> 
-      }*/}
+      {/* if(props==2){ */}
+      {/* <Twogrid 
+        option={option2}
+        defaultSizepara={parseInt(localStorage.getItem('2v1'), 10)}
+        onChangehandler={(size) => localStorage.setItem('2v1', size)}
+
+      /> */}
+      {/* } */}
+
+
       {/* threegrids option */}
-      {/* {<Threegrid size="600px" option={option2} />} */}
+      {<Threegrid  size="600px" 
+      option={option2}
+      defaultSizepara2={parseInt(localStorage.getItem('2v1'), 10)}
+      onChangehandler2={(size) => localStorage.setItem('2v1', size)}
+      // defaultSizepara2={parseInt(localStorage.getItem('2v2'), 10)}
+      // onChangehandler2={(size)=>{localStorage.setItem('2v2',size)}}      
+      
+      />}
+
+
       {/* props==4 */}
       {/* <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
-     <Twogrid size="50%" option={option2} /> 
-     <Twogrid size="50%" option={option2} /> 
-      </SplitPane> */}
+      <Twogrid size="50%"option={option2} /> 
+      <Twogrid size="50%" option={option2} /> 
+      </SplitPane>       */}
+
+
 
       {/* 5 count */}
       {/* <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
@@ -28,12 +48,16 @@ export const Editor1 = (props) => {
       <Threegrid size="550px" option={option2} />
       </SplitPane> */}
 
+
+
       {/* 6 count */}
       {/* <SplitPane split={option1}  defaultSize="350px" minSize={-1} maxSize="33.3%">
       <Threegrid size="550px" option={option2} />
       <Threegrid size="550px" option={option2} />
       </SplitPane> */}
- 
+
+
+
       {/* 7 count */}
       {/* <SplitPane split={option1}  defaultSize="350px" minSize={-1} maxSize="33.3%">
       <Threegrid size="550px" option={option2}/>
@@ -42,6 +66,8 @@ export const Editor1 = (props) => {
         <div> <Twogrid size="50%" option={option2}/></div>
       </SplitPane>
       </SplitPane> */}
+
+
 
       {/* 8 count */}
       {/* <SplitPane split={option1} defaultSize="50%">
@@ -55,6 +81,8 @@ export const Editor1 = (props) => {
           </SplitPane>
       </SplitPane> */}
 
+
+
       {/* 9 count */}
       {/* <SplitPane split="horizontal" defaultSize="33.3%">
         <Threegrid size="40.0%"/>
@@ -65,7 +93,7 @@ export const Editor1 = (props) => {
       </SplitPane> */}
 
       {/* 10 count */}
-      <SplitPane split="horizontal" defaultSize="50.0%">
+      {/* <SplitPane split="horizontal" defaultSize="50.0%">
         <SplitPane split={option2} defaultSize="40.0%">
             <div><Twogrid option={option2}size="40.0%"/></div>
             <div><Threegrid option={option2}size="40.0%"/></div>
@@ -74,7 +102,7 @@ export const Editor1 = (props) => {
             <div><Twogrid option={option2}size="40.0%"/></div>
             <div><Threegrid option={option2}size="40.0%"/></div>
           </SplitPane>
-      </SplitPane>
+      </SplitPane> */}
     </div>
   );
 };
