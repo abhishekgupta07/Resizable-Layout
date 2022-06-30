@@ -8,7 +8,6 @@
     background-clip: padding-box;
   }
    
-   
   .Resizer.horizontal {
     height: 0px;
     margin: -5px 0;
@@ -33,4 +32,7 @@
   }
   .Resizer.disabled:hover {
     border-color: yellow;
+  }
+  .maxwidth{
+    max-width:  m;
   }
