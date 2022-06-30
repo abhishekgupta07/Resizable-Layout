@@ -11,8 +11,8 @@
   .Resizer.horizontal {
     height: 0px;
     margin: -5px 0;
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
     cursor: row-resize;
     width: 100%;
   }
@@ -21,8 +21,8 @@
   .Resizer.vertical {
     width: 0px;
     margin: 0 -5px;
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
     cursor: col-resize;
   }
    
@@ -34,5 +34,5 @@
     border-color: yellow;
   }
   .maxwidth{
-    max-width:  m;
+  color: rgb(65, 24, 90);  
   }
