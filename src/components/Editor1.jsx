@@ -9,37 +9,39 @@ let option2 = "vertical";
 // let size = "600px";
 export const Editor1 = () => {
   return (
-    <div>
-      {/* twogrids option */}
+<div>
+  
+        {/* twogrids option */}
       {/* if(props==2){ */}
       {/* <Twogrid 
         option={option2}
-        defaultSizepara={parseInt(localStorage.getItem('2v1'), 10)}
-        onChangehandler={(size) => localStorage.setItem('2v1', size)}
-
+        defaultSizepara={parseInt(localStorage.getItem('2Grid1'), 10)}
+        onChangehandler={(size) => localStorage.setItem('2Grid1', size)}
       /> */}
-      {/* } */}
+
 
 
       {/* threegrids option */}
       {/* {<Threegrid  size="600px" 
-      option={option2}
-      defaultSizepara2={parseInt(localStorage.getItem('2v1'), 10)}
-      onChangehandler2={(size) => localStorage.setItem('2v1', size)}      
-      />}  */}
+      option={option2} 
+      defaultSizepara2={parseInt(localStorage.getItem('3Grid1'), 10)}
+      onChangehandler2={(size) => localStorage.setItem('3Grid1', size)}
+      onChangehandler={(size) => localStorage.setItem('3Grid2', size)}      
+      defaultSizepara={parseInt(localStorage.getItem('3Grid2'), 10)}    
+        />}  */}
 
 
       {/* props==4 */}
       {/* <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
       <Twogrid 
       option={option2}
-      defaultSizepara={parseInt(localStorage.getItem('2v1'), 10)}
-      onChangehandler={(size) => localStorage.setItem('2v1', size)}
+      defaultSizepara={parseInt(localStorage.getItem('4GridUp'), 10)}
+      onChangehandler={(size) => localStorage.setItem('4GridUp', size)}
       /> 
       <Twogrid  
       option={option2} 
-      defaultSizepara={parseInt(localStorage.getItem('2v2'), 10)}
-      onChangehandler={(size) => localStorage.setItem('2v2', size)}
+      defaultSizepara={parseInt(localStorage.getItem('4GridDn'), 10)}
+      onChangehandler={(size) => localStorage.setItem('4GridDn', size)}
       /> 
       </SplitPane>       */}
 
@@ -49,21 +51,52 @@ export const Editor1 = () => {
       {/* <SplitPane split={option1}  defaultSize="300px" minSize={-1} maxSize="33.3%">
       <Twogrid 
       option={option2} 
-      defaultSizepara={parseInt(localStorage.getItem('2v1'), 10)}
-      onChangehandler={(size) => localStorage.setItem('2v1', size)}
+      defaultSizepara={parseInt(localStorage.getItem('5GridUp1'), 10)}
+      onChangehandler={(size) => localStorage.setItem('5GridUp1', size)}
       /> 
       <Threegrid 
        option={option2} 
-       defaultSizepara2={parseInt(localStorage.getItem('3g1'), 10)}
-       onChangehandler2={(size) => localStorage.setItem('3g1', size)}
-       onChangehandler={(size) => localStorage.setItem('3g2', size)}      
-       defaultSizepara={parseInt(localStorage.getItem('3g2'), 10)}
+       defaultSizepara2={parseInt(localStorage.getItem('5GridDn1'), 10)}
+       onChangehandler2={(size) => localStorage.setItem('5GridDn1', size)}
+       onChangehandler={(size) => localStorage.setItem('5GridDn2', size)}      
+       defaultSizepara={parseInt(localStorage.getItem('5GridDn2'), 10)}
     />
       </SplitPane> */}
 
 
 
       {/* 6 count */}
+      <SplitPane split={option1}  defaultSize="350px" minSize={-1} maxSize="33.3%">
+      <Threegrid 
+      option={option2}
+      defaultSizepara2={parseInt(localStorage.getItem('6GridUp1'),10)}
+      onChangehandler2={(size) => localStorage.setItem('6GridUp1', size)}
+      onChangehandler={(size) => localStorage.setItem('6GridUp2', size)}      
+      defaultSizepara={parseInt(localStorage.getItem('6GridUp2'), 10)}
+      />
+
+      <Threegrid 
+      defaultSizepara2={parseInt(localStorage.getItem('6GridDn1'), 10)}
+      onChangehandler2={(size) => localStorage.setItem('6GridDn1', size)}
+      onChangehandler={(size) => localStorage.setItem('6GridDn2', size)}      
+      defaultSizepara={parseInt(localStorage.getItem('6GridDn2'), 10)}
+      option={option2} />
+
+      </SplitPane>
+
+
+
+
+
+
+{/* ////////////////////////////////COMING SOON //////////////////////////////////////////// */}
+                                  {/*    |    */}
+                                  {/*   \./    */}
+    
+
+
+
+      {/* 7 count */}
       {/* <SplitPane split={option1}  defaultSize="350px" minSize={-1} maxSize="33.3%">
       <Threegrid 
       option={option2}
@@ -72,26 +105,8 @@ export const Editor1 = () => {
       onChangehandler={(size) => localStorage.setItem('3g2', size)}      
       defaultSizepara={parseInt(localStorage.getItem('3g2'), 10)}
       />
-      <Threegrid 
-      defaultSizepara2={parseInt(localStorage.getItem('3g3'), 10)}
-      onChangehandler2={(size) => localStorage.setItem('3g3', size)}
-      onChangehandler={(size) => localStorage.setItem('3g4', size)}      
-      defaultSizepara={parseInt(localStorage.getItem('3g4'), 10)}
-      option={option2} />
-      </SplitPane> */}
-
-
-
-      {/* 7 count */}
-      <SplitPane split={option1}  defaultSize="350px" minSize={-1} maxSize="33.3%">
-      <Threegrid 
-      option={option2}
-      defaultSizepara2={parseInt(localStorage.getItem('3g1'), 10)}
-      onChangehandler2={(size) => localStorage.setItem('3g1', size)}
-      onChangehandler={(size) => localStorage.setItem('3g2', size)}      
-      defaultSizepara={parseInt(localStorage.getItem('3g2'), 10)}
-      />
-      <SplitPane defaultSize="50%" >
+      <SplitPane  defaultSize = {parseInt(localStorage.getItem('2v2'), 10)}
+      onChange={(size) => localStorage.setItem('2V2', size)}  >
         <div>
           <Twogrid 
            option={option2}
@@ -101,12 +116,12 @@ export const Editor1 = () => {
         <div> 
         <Twogrid 
          option={option2}
-         defaultSizepara={parseInt(localStorage.getItem('2v2'), 10)}
-        onChangehandler={(size) => localStorage.setItem('2v2', size)} 
+         defaultSizepara={parseInt(localStorage.getItem('2v3'), 10)}
+        onChangehandler={(size) => localStorage.setItem('2v3', size)} 
          />
           </div>
       </SplitPane>
-      </SplitPane>
+      </SplitPane> */}
 
 
 
@@ -144,6 +159,9 @@ export const Editor1 = () => {
             <div><Threegrid option={option2}size="40.0%"/></div>
           </SplitPane>
       </SplitPane> */}
+
+
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */}
     </div>
   );
 };
