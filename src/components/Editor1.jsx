@@ -9,7 +9,7 @@ let option2 = "vertical";
 // let size = "600px";
 export const Editor1 = () => {
   return (
-<div style={{backgroundColor:"red", width:"2200px", height:"1000px"}}>
+<div>
   
         {/* twogrids option */}
       {/* if(props==2){ */}
@@ -66,6 +66,37 @@ export const Editor1 = () => {
 
 
       {/* 6 count */}
+      <SplitPane split={option1}  defaultSize="350px" minSize={-1} maxSize="33.3%">
+      <Threegrid 
+      option={option2}
+      defaultSizepara2={parseInt(localStorage.getItem('6GridUp1'),10)}
+      onChangehandler2={(size) => localStorage.setItem('6GridUp1', size)}
+      onChangehandler={(size) => localStorage.setItem('6GridUp2', size)}      
+      defaultSizepara={parseInt(localStorage.getItem('6GridUp2'), 10)}
+      />
+
+      <Threegrid 
+      defaultSizepara2={parseInt(localStorage.getItem('6GridDn1'), 10)}
+      onChangehandler2={(size) => localStorage.setItem('6GridDn1', size)}
+      onChangehandler={(size) => localStorage.setItem('6GridDn2', size)}      
+      defaultSizepara={parseInt(localStorage.getItem('6GridDn2'), 10)}
+      option={option2} />
+
+      </SplitPane>
+
+
+
+
+
+
+{/* ////////////////////////////////COMING SOON //////////////////////////////////////////// */}
+                                  {/*    |    */}
+                                  {/*   \./    */}
+    
+
+
+
+      {/* 7 count */}
       {/* <SplitPane split={option1}  defaultSize="350px" minSize={-1} maxSize="33.3%">
       <Threegrid 
       option={option2}
