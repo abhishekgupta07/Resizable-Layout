@@ -13,28 +13,28 @@ export const Editor1 = () => {
   
         {/* twogrids option */}
       {/* if(props==2){ */}
-      <Twogrid 
+      {/* <Twogrid 
         option={option2}
-        defaultSizepara={parseInt(localStorage.getItem('2Grid1'), 10)}
+        defaultSizepara={parseInt(localStorage.getItem('2Grid1'), 10) || "50%"}
         onChangehandler={(size) => localStorage.setItem('2Grid1', size)}
-      />
+      /> */}
 
 
 
       {/* threegrids option */}
       {/* {<Threegrid  size="600px" 
       option={option2} 
-      defaultSizepara2={parseInt(localStorage.getItem('3Grid1'), 10)}
+      defaultSizepara2={parseInt(localStorage.getItem('3Grid1'), 10) || "33.3%"}
       onChangehandler2={(size) => localStorage.setItem('3Grid1', size)}
       onChangehandler={(size) => localStorage.setItem('3Grid2', size)}      
-      defaultSizepara={parseInt(localStorage.getItem('3Grid2'), 10) || "33.3%"}    
+      defaultSizepara={parseInt(localStorage.getItem('3Grid2'), 10) || "50%"}    
         />}  */}
 
 
       {/* props==4 */}
       {/* <SplitPane split={option1}  
-      defaultSize={parseInt(localStorage.getItem('4GridH1'), 10) || "50%"}
-      onChange={(size) => localStorage.setItem('4GridH1', size)} 
+      defaultSize={parseInt(localStorage.getItem('4GridH'), 10) || "50%"}
+      onChange={(size) => localStorage.setItem('4GridH', size)} 
       minSize={-1} maxSize="33.3%">
       <Twogrid 
       option={option2}
@@ -53,13 +53,13 @@ export const Editor1 = () => {
       {/* 5 count */}
       {/* <SplitPane split={option1} 
       minSize={2}
-      defaultSize={parseInt(localStorage.getItem('H1'), 10) || "50%" }
-      onChange={(size) => localStorage.setItem('H1', size)} 
+      defaultSize={parseInt(localStorage.getItem('5GridH'), 10) || "50%" }
+      onChange={(size) => localStorage.setItem('5GridH', size)} 
       
        maxSize="33.3%">
       <Twogrid 
       option={option2} 
-      defaultSizepara={parseInt(localStorage.getItem('5GridUp1'), 10) || "30px"}
+      defaultSizepara={parseInt(localStorage.getItem('5GridUp1'), 10) || "50%"}
       onChangehandler={(size) => localStorage.setItem('5GridUp1', size)}
       /> 
       <Threegrid 
@@ -67,34 +67,34 @@ export const Editor1 = () => {
        defaultSizepara2={parseInt(localStorage.getItem('5GridDn1'), 10) || "33.3%"}
        onChangehandler2={(size) => localStorage.setItem('5GridDn1', size) }
        onChangehandler={(size) => localStorage.setItem('5GridDn2', size)}      
-       defaultSizepara={parseInt(localStorage.getItem('5GridDn2'), 10) || "33.3%"}
+       defaultSizepara={parseInt(localStorage.getItem('5GridDn2'), 10) || "50%"}
     />
       </SplitPane> */}
 
 
 
       {/* 6 count */}
-      {/* <SplitPane split={option1}  
+      <SplitPane split={option1}  
       maxSize={"33.3%"}
-      defaultSize={parseInt(localStorage.getItem('6GridH1') , 10) || "350px"}
+      defaultSize={parseInt(localStorage.getItem('6GridH1') , 10) || "50%"}
       onChange={(size) => localStorage.setItem('6GridH1', size)} 
       minSize={-1} >
       <Threegrid 
       option={option2}
-      defaultSizepara2={parseInt(localStorage.getItem('6GridUp1'),10)}
+      defaultSizepara2={parseInt(localStorage.getItem('6GridUp1'),10) || "33.3%"}
       onChangehandler2={(size) => localStorage.setItem('6GridUp1', size)}
       onChangehandler={(size) => localStorage.setItem('6GridUp2', size)}      
-      defaultSizepara={parseInt(localStorage.getItem('6GridUp2'), 10)}
+      defaultSizepara={parseInt(localStorage.getItem('6GridUp2'), 10) || "50%"}
       />
 
       <Threegrid 
-      defaultSizepara2={parseInt(localStorage.getItem('6GridDn1'), 10)}
+      defaultSizepara2={parseInt(localStorage.getItem('6GridDn1'), 10) || "33.3%"}
       onChangehandler2={(size) => localStorage.setItem('6GridDn1', size)}
       onChangehandler={(size) => localStorage.setItem('6GridDn2', size)}      
-      defaultSizepara={parseInt(localStorage.getItem('6GridDn2'), 10)}
+      defaultSizepara={parseInt(localStorage.getItem('6GridDn2'), 10) || "50%"}
       option={option2} />
 
-      </SplitPane> */}
+      </SplitPane>
 
 
 
