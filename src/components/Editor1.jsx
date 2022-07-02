@@ -17,6 +17,7 @@ export const Editor1 = () => {
         option={option2}
         defaultSizepara={parseInt(localStorage.getItem('2Grid1'), 10) || "50%"}
         onChangehandler={(size) => localStorage.setItem('2Grid1', size)}
+        minSizeG={100} maxSizeG={2200}
       /> */}
 
 
@@ -27,7 +28,8 @@ export const Editor1 = () => {
       defaultSizepara2={parseInt(localStorage.getItem('3Grid1'), 10) || "33.3%"}
       onChangehandler2={(size) => localStorage.setItem('3Grid1', size)}
       onChangehandler={(size) => localStorage.setItem('3Grid2', size)}      
-      defaultSizepara={parseInt(localStorage.getItem('3Grid2'), 10) || "50%"}    
+      defaultSizepara={parseInt(localStorage.getItem('3Grid2'), 10) || "50%"}
+      minSizeP1={100} maxSizeP1={2000}
         />}  */}
 
 
@@ -35,32 +37,36 @@ export const Editor1 = () => {
       {/* <SplitPane split={option1}  
       defaultSize={parseInt(localStorage.getItem('4GridH'), 10) || "50%"}
       onChange={(size) => localStorage.setItem('4GridH', size)} 
-      minSize={-1} maxSize="33.3%">
+      minSize={80} maxSize={1000}>
       <Twogrid 
       option={option2}
       defaultSizepara={parseInt(localStorage.getItem('4GridUp'), 10) || "50%" }
       onChangehandler={(size) => localStorage.setItem('4GridUp', size)}
+      minSizeG={100}
+      maxSizeG={2200}
       /> 
       <Twogrid  
       option={option2} 
       defaultSizepara={parseInt(localStorage.getItem('4GridDn'), 10) || "50%"}
       onChangehandler={(size) => localStorage.setItem('4GridDn', size)}
+      minSizeG={100}
+      maxSizeG={2200}
       /> 
       </SplitPane>       */}
 
 
-
       {/* 5 count */}
       {/* <SplitPane split={option1} 
-      minSize={2}
       defaultSize={parseInt(localStorage.getItem('5GridH'), 10) || "50%" }
       onChange={(size) => localStorage.setItem('5GridH', size)} 
-      
-       maxSize="33.3%">
+      minSize={80}
+       maxSize={1050}>
       <Twogrid 
       option={option2} 
       defaultSizepara={parseInt(localStorage.getItem('5GridUp1'), 10) || "50%"}
       onChangehandler={(size) => localStorage.setItem('5GridUp1', size)}
+      minSizeG={100}
+      maxSizeG={2200}
       /> 
       <Threegrid 
        option={option2} 
@@ -68,23 +74,28 @@ export const Editor1 = () => {
        onChangehandler2={(size) => localStorage.setItem('5GridDn1', size) }
        onChangehandler={(size) => localStorage.setItem('5GridDn2', size)}      
        defaultSizepara={parseInt(localStorage.getItem('5GridDn2'), 10) || "50%"}
+       minSizeP1={100}
+       maxSizeP1={2000}
+
     />
       </SplitPane> */}
 
 
 
       {/* 6 count */}
-      <SplitPane split={option1}  
-      maxSize={"33.3%"}
+      {/* <SplitPane split={option1}  
       defaultSize={parseInt(localStorage.getItem('6GridH1') , 10) || "50%"}
       onChange={(size) => localStorage.setItem('6GridH1', size)} 
-      minSize={-1} >
+      minSize={80}
+      maxSize={1050} >
       <Threegrid 
       option={option2}
       defaultSizepara2={parseInt(localStorage.getItem('6GridUp1'),10) || "33.3%"}
       onChangehandler2={(size) => localStorage.setItem('6GridUp1', size)}
       onChangehandler={(size) => localStorage.setItem('6GridUp2', size)}      
       defaultSizepara={parseInt(localStorage.getItem('6GridUp2'), 10) || "50%"}
+      minSizeP1={100}
+      maxSizeP1={2000}
       />
 
       <Threegrid 
@@ -92,9 +103,11 @@ export const Editor1 = () => {
       onChangehandler2={(size) => localStorage.setItem('6GridDn1', size)}
       onChangehandler={(size) => localStorage.setItem('6GridDn2', size)}      
       defaultSizepara={parseInt(localStorage.getItem('6GridDn2'), 10) || "50%"}
-      option={option2} />
+      option={option2}
+      minSizeP1={100}
+      maxSizeP1={2000} />
 
-      </SplitPane>
+      </SplitPane> */}
 
 
 
