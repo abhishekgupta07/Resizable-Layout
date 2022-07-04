@@ -9,11 +9,14 @@ $bgcolor: rgb(61, 34, 78);
     background-color: darkmagenta;
     border: 4px solid rgb(100, 49, 139);
     margin-bottom: 10px;
+    // flex-wrap: wrap; 
 }
 
 .parent-container-flex {
     display: flex;
     flex-direction: column;
+    // flex-wrap: wrap;
+    // flex-shrink: 2px;
 }
 
 .child-container-flex {
@@ -28,6 +31,7 @@ $bgcolor: rgb(61, 34, 78);
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .parent-flex-item {
@@ -39,6 +43,7 @@ $bgcolor: rgb(61, 34, 78);
     height: 100px;
     flex-basis: 200px;
     margin-bottom: 10px;
+    flex-basis: 200px;
 }
 
 .child-flex-item1 {
@@ -74,7 +79,7 @@ $bgcolor: rgb(61, 34, 78);
     align-content: space-around;
     flex-direction: row;
     // opacity:0.1;
-    margin-top: 5px;
+    // margin-top: 5px;
     // box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 255, 255, 0.701);
     border-radius: 5%;
     text-align: center;
@@ -145,5 +150,5 @@ $bgcolor: rgb(61, 34, 78);
 }
 
 #flexchild-2-2 {
-    background-color: $bgcolor;
+    // background-color: $bgcolor;
 }
