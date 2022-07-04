@@ -3,6 +3,23 @@
   box-sizing: border-box;
   background-clip: padding-box;
 }
+
+.xyz{
+  display: flex;
+  // flex: 1 1 0%;
+  height: 70%;
+  position: absolute;
+  // outline: none;
+  // overflow: hidden;
+  // user-select: text;
+  // bottom: 0px;
+  // flex-direction: column;
+  /* min-height: 100%; */
+  top: 130px;
+  width: 85%;
+  // max-height: 70%;
+  left: 110px;
+}
 .Resizer.vertical:not(.disabled) {
   position: relative;
   z-index: 1;
