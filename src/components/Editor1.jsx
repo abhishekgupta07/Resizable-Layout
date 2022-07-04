@@ -15,7 +15,6 @@ const runcallback_2 = (cb2) => {
   return cb2();
 };
 function twogri() {
-  console.log("hello");
   return (
     <div>
       <Twogrid

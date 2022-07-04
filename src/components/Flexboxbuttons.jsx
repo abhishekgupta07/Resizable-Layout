@@ -15,43 +15,51 @@ export class Flexboxbuttons extends Component {
             this.setState({
                 gridnumber: 1,
             });
-            
+        localStorage.setItem('gridnumber',1);
         }
         if(gridnum===2){
             this.setState({
                 gridnumber: 2,
             });
-        
+        localStorage.setItem('gridnumber',2);
+           
         }
         if(gridnum===3){
             this.setState({
                 gridnumber: 3,
             });
-           
+        // localStorage.setItem('gridnumber',gridnum);
+        localStorage.setItem('gridnumber',3);
+
         }
         if(gridnum===4){
             this.setState({
                 gridnumber: 4,
             });
-             
+        // localStorage.setItem('gridnumber',gridnum);    
+        localStorage.setItem('gridnumber',4);
+
         }
         if(gridnum===5){
             this.setState({
                 gridnumber: 5,
             });
-          
+        // localStorage.setItem('gridnumber',gridnum);  
+        localStorage.setItem('gridnumber',5);
+
         }
         if(gridnum===6){
             this.setState({
                 gridnumber: 6,
             });
-           
+        // localStorage.setItem('gridnumber',gridnum); 
+        localStorage.setItem('gridnumber',6); 
         }
 
     }
     clicksave=(gridnum)=>{
         alert("save changes");
-        localStorage.setItem('gridnumber',gridnum);
+        // localStorage.setItem('gridnumber',gridnum);
     }
     render() {
         // alert(this.state.gridnumber);
