@@ -134,7 +134,7 @@ class Editor1 extends Component {
                 })
               }}
               minSizeG={100}
-              maxSizeG={2200}
+              maxSizeG={1200}
             />
           ) : num === 3 ? (
             <Threegrid
@@ -158,7 +158,7 @@ class Editor1 extends Component {
                 })
               }}
               minSizeP1={100}
-              maxSizeP1={2000}
+              maxSizeP1={1100}
             />
           ) : num === 4 ? (
             <SplitPane
@@ -170,8 +170,8 @@ class Editor1 extends Component {
                   Grid_4_H: size
                 }, () => this.forceUpdate())
               }}
-              minSize={80}
-              maxSize={1000}
+              minSize={20}
+              maxSize={490}
             >
               <Twogrid
                 option={option2}
@@ -185,7 +185,7 @@ class Editor1 extends Component {
                   }, () => this.forceUpdate())
                 }}
                 minSizeG={100}
-                maxSizeG={2200}
+                maxSizeG={1200}
               />
               <Twogrid
                 option={option2}
@@ -199,7 +199,7 @@ class Editor1 extends Component {
                   }, () => this.forceUpdate())
                 }}
                 minSizeG={100}
-                maxSizeG={2200}
+                maxSizeG={1200}
               />
             </SplitPane>
           ) : num === 5 ? (
@@ -212,8 +212,8 @@ class Editor1 extends Component {
                   Grid_5_H: size
                 }, () => this.forceUpdate())
               }}
-              minSize={80}
-              maxSize={1050}
+              minSize={20}
+              maxSize={490}
             >
               <Twogrid
                 option={option2}
@@ -227,7 +227,7 @@ class Editor1 extends Component {
                   }, () => this.forceUpdate())
                 }}
                 minSizeG={100}
-                maxSizeG={2200}
+                maxSizeG={1200}
               />
               <Threegrid
                 option={option2}
@@ -251,7 +251,7 @@ class Editor1 extends Component {
                 }}
 
                 minSizeP1={100}
-                maxSizeP1={2000}
+                maxSizeP1={1200}
               />
             </SplitPane>
           ) : num === 6 ? (
@@ -264,8 +264,8 @@ class Editor1 extends Component {
                   Grid_6_H: size
                 })
               }}
-              minSize={80}
-              maxSize={1050}
+              minSize={20}
+              maxSize={490}
             >
               <Threegrid
                 option={option2}
@@ -288,7 +288,7 @@ class Editor1 extends Component {
                   parseInt(localStorage.getItem("Grid_6_Up2"), 10)
                 }
                 minSizeP1={100}
-                maxSizeP1={2000}
+                maxSizeP1={1150}
               />
 
               <Threegrid
@@ -312,7 +312,7 @@ class Editor1 extends Component {
                 }
                 option={option2}
                 minSizeP1={100}
-                maxSizeP1={2000}
+                maxSizeP1={1150}
               />
             </SplitPane>
           ) : null}
