@@ -47,24 +47,25 @@ class Editor1 extends Component {
   constructor(props) {
     super(props);
     this.state={
-      Grid2_1: (50/100)*100,
-      Grid3_1: (50/100)*100,
-      Grid3_2:(50/100)*100,
-      Grid_4_H:(50/100)*100,
-      Grid_4_up:(50/100)*100,
-      Grid_4_Dn:(50/100)*100,
-      Grid_5_H:(50/100)*100,
-      Grid_5_Up1:(50/100)*100,
-      Grid_5_Dn1:(50/100)*100,
-      Grid_5_Dn2:(50/100)*100,
-      Grid_6_H:(50/100)*100,
-      Grid_6_Up1:(50/100)*100,
-      Grid_6_Up2:(50/100)*100,
-      Grid_6_Dn1:(50/100)*100,
-      Grid_6_Dn2:(50/100)*100
+      Grid2_1:JSON.parse(localStorage.getItem('Grid2_1'))||(50/100)*100,
+      Grid3_1: JSON.parse(localStorage.getItem('Grid3_1'))||(50/100)*100,
+      Grid3_2:JSON.parse(localStorage.getItem('Grid3_2'))||(50/100)*100,
+      Grid_4_H:JSON.parse(localStorage.getItem('Grid4_H'))||(50/100)*100,
+      Grid_4_up:JSON.parse(localStorage.getItem('Grid_4_up'))||(50/100)*100,
+      Grid_4_Dn:JSON.parse(localStorage.getItem('Grid_4_Dn'))||(50/100)*100,
+      Grid_5_H:JSON.parse(localStorage.getItem('Grid_5_H'))||(50/100)*100,
+      Grid_5_Up1:JSON.parse(localStorage.getItem('Grid_5_Up1'))||(50/100)*100,
+      Grid_5_Dn1:JSON.parse(localStorage.getItem('Grid_5_Dn1'))||(50/100)*100,
+      Grid_5_Dn2:JSON.parse(localStorage.getItem('Grid_5_Dn2'))||(50/100)*100,
+      Grid_6_H:JSON.parse(localStorage.getItem('Grid_6_H'))||(50/100)*100,
+      Grid_6_Up1:JSON.parse(localStorage.getItem('Grid_6_Up1'))||(50/100)*100,
+      Grid_6_Up2:JSON.parse(localStorage.getItem('Grid_6_Up2'))||(50/100)*100,
+      Grid_6_Dn1:JSON.parse(localStorage.getItem('Grid_6_Dn1'))||(50/100)*100,
+      Grid_6_Dn2:JSON.parse(localStorage.getItem('Grid_6_Dn2'))||(50/100)*100,
     }
   }
-  clicksave=(value1,value2)=>{
+  clicksave=()=>{
+    alert("save changes");
     localStorage.setItem("Grid2_1", this.state.Grid2_1);
     localStorage.setItem("Grid3_1",this.state.Grid3_1);
     localStorage.setItem("Grid3_2",this.state.Grid3_2);
@@ -125,7 +126,6 @@ class Editor1 extends Component {
               this.setState({
                 Grid2_1:size
               })
-              console.log(this.state.Grid2_1)
             }}
             minSizeG={100}
             maxSizeG={2200}
@@ -289,7 +289,7 @@ class Editor1 extends Component {
                 })
               }}
               defaultSizepara={
-                parseInt(localStorage.getItem("Grid_6_Dn2"), 10) || "50%"
+                parseInt(localStorage.getItem("Grid_6_Dn2"), 10) 
               }
               option={option2}
               minSizeP1={100}
