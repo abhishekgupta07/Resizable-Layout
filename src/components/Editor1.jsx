@@ -4,6 +4,7 @@ import Twogrid from "./Twogrid";
 import Threegrid from "./Threegrid";
 import SplitPane from "react-split-pane";
 import Split from "react-split";
+import { grid } from "@mui/system";
 let option1 = "horizontal";
 let option2 = "vertical";
 let size = "100px";
@@ -13,19 +14,25 @@ const runcallback = (cb) => {
 const runcallback_2 = (cb2) => {
   return cb2();
 };
-function twogri() {
+
+const data = [
+  { a: 1, b: 1 },
+  // {a:2,b:0},
+  // {a:0, b:2}
+];
+
+const twogri = (gridValue) => {
   return (
-    <div>
-      <Twogrid
-        option={option2}
-        defaultSizepara={parseInt(localStorage.getItem("2Grid1"), 10) || "50%"}
-        onChangehandler={(size) => localStorage.setItem("2Grid1", size)}
-        minSizeG={100}
-        maxSizeG={2200}
-      />
-    </div>
+    <Twogrid
+      option={option2}
+      defaultSizepara={parseInt(localStorage.getItem("2Grid1"), 10) || "50%"}
+      onChangehandler={(size) => localStorage.setItem("2Grid1", size)}
+      minSizeG={100}
+      maxSizeG={2200}
+    />
   );
-}
+};
+
 const threegri = () => {
   return (
     <Threegrid
@@ -41,65 +48,102 @@ const threegri = () => {
   );
 };
 
-      let count=5;
-      let k=0;
-      if(count%2 === 1){
-        k=1;
-      }
+const func2 = (a) => {
+  let Arr1 = [];
+  for (let i = 0; i < a; i++) {
+    Arr1.push(twogri());
+  }
+  return Arr1;
 
-      let components1 = []
-      let components2 = []
-      for(var i=0; i<3;i++){
-        components1.push(twogri())
-      }
+  // let twoArray = ["a", "b"];
+  // let threeArray = [];
+  // threeArray.length = a.grid3;
+  // return (
+  //   <>
+  //     <SplitPane split="horizontal">
+  //       {console.log(twogri(twoArray))}
+  //       {/* {twoArray.map(() => {
+  //         return <>{twogri()}</>;
+  //       })} */}
+  //       {/* {threeArray.forEach(() => {
+  //         threegri();
+  //       })} */}
+  //       {/* {twogri(twoArray)} */}
+  //       {/* {threegri()} */}
+  //     </SplitPane>
+  //   </>
+  // );
+  // //  threegri();
+};
 
-      for(var j=0;j<0;j++){
-        components2.push(threegri())
-      }
-  
+const func3 = (b) => {
+  let Arr2 = [];
+  for (let j = 0; j < b; j++) {
+    Arr2.push(threegri());
+  }
+  return Arr2;
+};
 
 class Editor1 extends Component {
   render() {
     return (
-<div>
-  <div className="xyz">
+      <div>
+        <div className="xyz">
+          <SplitPane split="horizontal">
+            {data.map(
+              (item) => {
+                const c = [];
+                const a = func2(item.a);
+                const b = func3(item.b);
+                c.push(a, b);
+                return c;
+              }
+              
+            )}
+            {/* {func2(this.item.a)} */}
+            {/* {func2(this.item.b)} */}
+          </SplitPane>
 
+          {/* {console.log(func2({ grid2: 1, grid3: 1 }))} */}
+          {/* <SplitPane split="horizontal"> */}
+          {/* {func2({ grid2: 1, grid3: 1 })} */}
+          {/* {twogri()}
+            {threegri()} */}
+          {/* {func2({ grid2: 1, grid3: 1 })} */}
+          {/* {func3(2)} */}
 
-      <SplitPane split="horizontal">
           {/* <SplitPane split="vertical"> */}
-          {components1.map(functns =>( <div>{functns}</div>))}
           {/* </SplitPane> */}
-          {components2.map(func2 =>( <div>{func2}</div>))}
-      </SplitPane>
-      
-
-
+          {/* {components2.map(func2 =>( <div>{func2({gid2:1,grid3:1})}</div>))} */}
+          {/* <SplitPane split="vertical">
+          {components1.map(functns =>( <div>{functns}</div>))}
+</SplitPane> */}
+          {/* </SplitPane> */}
 
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           {/* <SplitPane split="horizontal">
           {
           runcallback(()=>{
             const components1=[];
-            for(let i=0;i<0;i++){
+            for(let i=0;i<2;i++){
               components1.push(twogri());
             }
             return components1;
           })
           }
 
-      <SplitPane split="vertical">
         {
           runcallback_2(()=>{
             let components2=[];
-            for(let j=0;j<1;j++){
+            for(let j=0;j<0;j++){
               components2.push(threegri());
             }
             return components2;
           })
         }
         
-        </SplitPane>
         </SplitPane> */}
+
           {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
           {/* {num === 2 ? (
