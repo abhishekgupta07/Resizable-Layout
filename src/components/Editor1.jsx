@@ -41,27 +41,52 @@ const threegri = () => {
     />
   );
 };
-//   for(var i=0; i<Math.floor(3/2);i++){
-//     components1.push(twogri)
-//   }
-//   // console.log(components1);
-//   for(var j=0;j<3/2;j++){
-//     components2.push(threegri)
-//   }
-//   // console.log(components2);
-// return components1
+const sizes=[];
 
 class Editor1 extends Component {
   constructor(props) {
     super(props);
-
-    console.log({ props });
+    this.state={
+      Grid2_1: (50/100)*100,
+      Grid3_1: (50/100)*100,
+      Grid3_2:(50/100)*100,
+      Grid_4_H:(50/100)*100,
+      Grid_4_up:(50/100)*100,
+      Grid_4_Dn:(50/100)*100,
+      Grid_5_H:(50/100)*100,
+      Grid_5_Up1:(50/100)*100,
+      Grid_5_Dn1:(50/100)*100,
+      Grid_5_Dn2:(50/100)*100,
+      Grid_6_H:(50/100)*100,
+      Grid_6_Up1:(50/100)*100,
+      Grid_6_Up2:(50/100)*100,
+      Grid_6_Dn1:(50/100)*100,
+      Grid_6_Dn2:(50/100)*100
+    }
+  }
+  clicksave=(value1,value2)=>{
+    localStorage.setItem("Grid2_1", this.state.Grid2_1);
+    localStorage.setItem("Grid3_1",this.state.Grid3_1);
+    localStorage.setItem("Grid3_2",this.state.Grid3_2);
+    localStorage.setItem("Grid_4_H",this.state.Grid_4_H);
+    localStorage.setItem("Grid_4_up",this.state.Grid_4_up);
+    localStorage.setItem("Grid_4_Dn",this.state.Grid_4_Dn);
+    localStorage.setItem("Grid_5_H",this.state.Grid_5_H);
+    localStorage.setItem("Grid_5_Up1",this.state.Grid_5_Up1);
+    localStorage.setItem("Grid_5_Dn1",this.state.Grid_5_Dn1);
+    localStorage.setItem("Grid_5_Dn2",this.state.Grid_5_Dn2);
+    localStorage.setItem("Grid_6_H",this.state.Grid_6_H);
+    localStorage.setItem("Grid_6_Up1",this.state.Grid_6_Up1);
+    localStorage.setItem("Grid_6_Up2",this.state.Grid_6_Up2);
+    localStorage.setItem("Grid_6_Dn1",this.state.Grid_6_Dn1);
+    localStorage.setItem("Grid_6_Dn2",this.state.Grid_6_Dn2);
   }
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const { num } = this.props;
-    console.log(num);
+    // console.log(num);
     return (
+      <div>
       <div className="xyz">
         {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         {/* <SplitPane split="horizontal">
@@ -94,9 +119,14 @@ class Editor1 extends Component {
           <Twogrid
             option={option2}
             defaultSizepara={
-              parseInt(localStorage.getItem("2Grid1"), 10) || "50%"
+              parseInt(localStorage.getItem("Grid2_1"), 10) 
             }
-            onChangehandler={(size) => localStorage.setItem("2Grid1", size)}
+            onChangehandler={(size) => {
+              this.setState({
+                Grid2_1:size
+              })
+              console.log(this.state.Grid2_1)
+            }}
             minSizeG={100}
             maxSizeG={2200}
           />
@@ -105,39 +135,59 @@ class Editor1 extends Component {
             size="600px"
             option={option2}
             defaultSizepara2={
-              parseInt(localStorage.getItem("3Grid1"), 10) || "33.3%"
+              parseInt(localStorage.getItem("Grid3_1"), 10)
             }
-            onChangehandler2={(size) => localStorage.setItem("3Grid1", size)}
-            onChangehandler={(size) => localStorage.setItem("3Grid2", size)}
+            onChangehandler2={(size) => {
+              this.setState({
+                Grid3_1:size
+              })
+            }}
             defaultSizepara={
-              parseInt(localStorage.getItem("3Grid2"), 10) || "50%"
+              parseInt(localStorage.getItem("Grid3_2"), 10) 
             }
+            onChangehandler={(size) =>{
+              this.setState({
+                Grid3_2:size
+              })
+            }}
             minSizeP1={100}
             maxSizeP1={2000}
           />
         ) : num === 4 ? (
           <SplitPane
             split={option1}
-            defaultSize={parseInt(localStorage.getItem("4GridH"), 10) || "50%"}
-            onChange={(size) => localStorage.setItem("4GridH", size)}
+            defaultSize={parseInt(localStorage.getItem("Grid_4_H"), 10)}
+            onChange={(size) => {
+              this.setState({
+                Grid_4_H:size
+              })
+            }}
             minSize={80}
             maxSize={1000}
           >
             <Twogrid
               option={option2}
               defaultSizepara={
-                parseInt(localStorage.getItem("4GridUp"), 10) || "50%"
+                parseInt(localStorage.getItem("Grid_4_up"), 10) 
               }
-              onChangehandler={(size) => localStorage.setItem("4GridUp", size)}
+              onChangehandler={(size) => {
+                this.setState({
+                  Grid_4_up:size
+                })                
+              }}
               minSizeG={100}
               maxSizeG={2200}
             />
             <Twogrid
               option={option2}
               defaultSizepara={
-                parseInt(localStorage.getItem("4GridDn"), 10) || "50%"
+                parseInt(localStorage.getItem("Grid_4_Dn"),10)
               }
-              onChangehandler={(size) => localStorage.setItem("4GridDn", size)}
+              onChangehandler={(size) => {
+                this.setState({
+                  Grid_4_Dn:size
+                })
+              }}
               minSizeG={100}
               maxSizeG={2200}
             />
@@ -145,32 +195,47 @@ class Editor1 extends Component {
         ) : num === 5 ? (
           <SplitPane
             split={option1}
-            defaultSize={parseInt(localStorage.getItem("5GridH"), 10) || "50%"}
-            onChange={(size) => localStorage.setItem("5GridH", size)}
+            defaultSize={parseInt(localStorage.getItem("Grid_5_H"), 10)}
+            onChange={(size) =>{
+              this.setState({
+                Grid_5_H:size
+              })
+            }}
             minSize={80}
             maxSize={1050}
           >
             <Twogrid
               option={option2}
               defaultSizepara={
-                parseInt(localStorage.getItem("5GridUp1"), 10) || "50%"
+                parseInt(localStorage.getItem("Grid_5_Up1"), 10) 
               }
-              onChangehandler={(size) => localStorage.setItem("5GridUp1", size)}
+              onChangehandler={(size) => {
+                this.setState({
+                  Grid_5_Up1:size
+                })
+              }}
               minSizeG={100}
               maxSizeG={2200}
             />
             <Threegrid
               option={option2}
               defaultSizepara2={
-                parseInt(localStorage.getItem("5GridDn1"), 10) || "33.3%"
+                parseInt(localStorage.getItem("Grid_5_Dn1"), 10)
               }
-              onChangehandler2={(size) =>
-                localStorage.setItem("5GridDn1", size)
-              }
-              onChangehandler={(size) => localStorage.setItem("5GridDn2", size)}
+              onChangehandler2={(size) =>{
+                  this.setState({
+                    Grid_5_Dn1:size
+                  })
+              }}
               defaultSizepara={
-                parseInt(localStorage.getItem("5GridDn2"), 10) || "50%"
+                parseInt(localStorage.getItem("Grid_5_Dn2"), 10) 
               }
+              onChangehandler={(size) => {
+                this.setState({
+                  Grid_5_Dn2:size
+                })
+              }}
+              
               minSizeP1={100}
               maxSizeP1={2000}
             />
@@ -178,22 +243,32 @@ class Editor1 extends Component {
         ) : num === 6 ? (
           <SplitPane
             split={option1}
-            defaultSize={parseInt(localStorage.getItem("6GridH1"), 10) || "50%"}
-            onChange={(size) => localStorage.setItem("6GridH1", size)}
+            defaultSize={parseInt(localStorage.getItem("Grid_6_H"), 10)}
+            onChange={(size) =>{
+              this.setState({
+                Grid_6_H:size
+              })
+            }}
             minSize={80}
             maxSize={1050}
           >
             <Threegrid
               option={option2}
               defaultSizepara2={
-                parseInt(localStorage.getItem("6GridUp1"), 10) || "33.3%"
+                parseInt(localStorage.getItem("Grid_6_Up1"), 10)
               }
-              onChangehandler2={(size) =>
-                localStorage.setItem("6GridUp1", size)
-              }
-              onChangehandler={(size) => localStorage.setItem("6GridUp2", size)}
+              onChangehandler2={(size) =>{
+                this.setState({
+                  Grid_6_Up1:size
+                })
+              }}
+              onChangehandler={(size) => {
+                this.setState({
+                  Grid_6_Up2:size
+                })
+              }}
               defaultSizepara={
-                parseInt(localStorage.getItem("6GridUp2"), 10) || "50%"
+                parseInt(localStorage.getItem("Grid_6_Up2"), 10)
               }
               minSizeP1={100}
               maxSizeP1={2000}
@@ -201,14 +276,20 @@ class Editor1 extends Component {
 
             <Threegrid
               defaultSizepara2={
-                parseInt(localStorage.getItem("6GridDn1"), 10) || "33.3%"
+                parseInt(localStorage.getItem("Grid_6_Dn1"), 10) 
               }
               onChangehandler2={(size) =>
-                localStorage.setItem("6GridDn1", size)
+                this.setState({
+                  Grid_6_Dn1:size
+                })
               }
-              onChangehandler={(size) => localStorage.setItem("6GridDn2", size)}
+              onChangehandler={(size) =>{
+                this.setState({
+                  Grid_6_Dn2:size
+                })
+              }}
               defaultSizepara={
-                parseInt(localStorage.getItem("6GridDn2"), 10) || "50%"
+                parseInt(localStorage.getItem("Grid_6_Dn2"), 10) || "50%"
               }
               option={option2}
               minSizeP1={100}
@@ -378,6 +459,10 @@ class Editor1 extends Component {
       </SplitPane> */}
         {/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */}
       </div>
+       <div>
+       <button type="button" onClick={()=>this.clicksave()}>Save</button>
+   </div>
+   </div>
     );
   }
 }

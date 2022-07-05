@@ -133,9 +133,7 @@ export class Flexboxbuttons extends Component {
                     </div>
                 </div>
                 <Editor1 num={this.state?.gridnumber} />
-                <div>
-                    <button type="button" onClick={()=>this.clicksave(this.state.gridnumber)}>Save</button>
-                </div>
+               
             </div>
         );
     }
