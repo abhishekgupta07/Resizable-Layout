@@ -7,18 +7,11 @@ import Split from "react-split";
 import { grid } from "@mui/system";
 let option1 = "horizontal";
 let option2 = "vertical";
-let size = "100px";
-const runcallback = (cb) => {
-  return cb();
-};
-const runcallback_2 = (cb2) => {
-  return cb2();
-};
 
 const data = [
-  { a: 1, b: 1 },
-  // {a:2,b:0},
-  // {a:0, b:2}
+  { a: 0, b: 2 },
+  {a:1,b:1},
+  {a:0, b:2}
 ];
 
 const twogri = (gridValue) => {
@@ -54,26 +47,6 @@ const func2 = (a) => {
     Arr1.push(twogri());
   }
   return Arr1;
-
-  // let twoArray = ["a", "b"];
-  // let threeArray = [];
-  // threeArray.length = a.grid3;
-  // return (
-  //   <>
-  //     <SplitPane split="horizontal">
-  //       {console.log(twogri(twoArray))}
-  //       {/* {twoArray.map(() => {
-  //         return <>{twogri()}</>;
-  //       })} */}
-  //       {/* {threeArray.forEach(() => {
-  //         threegri();
-  //       })} */}
-  //       {/* {twogri(twoArray)} */}
-  //       {/* {threegri()} */}
-  //     </SplitPane>
-  //   </>
-  // );
-  // //  threegri();
 };
 
 const func3 = (b) => {
@@ -92,18 +65,16 @@ class Editor1 extends Component {
           <SplitPane split="horizontal">
             {data.map(
               (item) => {
+                console.log(item)
                 const c = [];
                 const a = func2(item.a);
                 const b = func3(item.b);
                 c.push(a, b);
                 return c;
               }
-              
             )}
-            {/* {func2(this.item.a)} */}
-            {/* {func2(this.item.b)} */}
           </SplitPane>
-
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           {/* {console.log(func2({ grid2: 1, grid3: 1 }))} */}
           {/* <SplitPane split="horizontal"> */}
           {/* {func2({ grid2: 1, grid3: 1 })} */}
