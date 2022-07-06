@@ -7,12 +7,15 @@ import Split from "react-split";
 import { grid } from "@mui/system";
 let option1 = "horizontal";
 let option2 = "vertical";
+let updateA = 0;
+let updateB = 0;
+let obj={};
 
-const data = [
-  { a: 0, b: 2 },
-  {a:1,b:1},
-  {a:0, b:2}
-];
+// const data = [
+//   {a: 1,b: 1},  //4
+//   {a:1,b:1},      //5
+//   {a:0, b:2}     //6
+// ];
 
 const twogri = (gridValue) => {
   return (
@@ -59,11 +62,17 @@ const func3 = (b) => {
 
 class Editor1 extends Component {
   render() {
+    const { num } = this.props;
+    const numC = Math.ceil(num / 2);
+    const numF = Math.floor(num / 2);
+    if (numC % 2 === 0) obj = ,numC / 2;
+    else if(numC%3===0) updateA= numC/3;
+    console.log("value-->",updateA);
     return (
       <div>
         <div className="xyz">
           <SplitPane split="horizontal">
-            {data.map(
+            {/* {data.map(
               (item) => {
                 console.log(item)
                 const c = [];
@@ -72,9 +81,12 @@ class Editor1 extends Component {
                 c.push(a, b);
                 return c;
               }
-            )}
+            )} */}
+
+            {func2(2)}
+            {func3(0)}
           </SplitPane>
-{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           {/* {console.log(func2({ grid2: 1, grid3: 1 }))} */}
           {/* <SplitPane split="horizontal"> */}
           {/* {func2({ grid2: 1, grid3: 1 })} */}

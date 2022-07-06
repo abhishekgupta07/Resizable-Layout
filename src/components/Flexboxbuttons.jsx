@@ -132,7 +132,7 @@ export class Flexboxbuttons extends Component {
                         </button>
                     </div>
                 </div>
-                <Editor1 num={this.state?.gridnumber} />
+                <Editor1 num={this.state.gridnumber} />
                 
             </div>
         );
