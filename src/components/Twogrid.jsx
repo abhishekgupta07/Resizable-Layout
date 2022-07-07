@@ -5,7 +5,7 @@ function Twogrid({ option, size, defaultSizepara, onChangehandler, minSizeG, max
     return (
         <div>
             <SplitPane split={option} defaultSize={defaultSizepara}
-                onChange={onChangehandler} minSize={minSizeG} maxSize={maxSizeG} primary="first">
+                onChange={onChangehandler} minSize={minSizeG} maxSize={maxSizeG} primary="second">
                 <canvas style={{ width: "100%", height: "100%", backgroundColor: "rgb(61, 34, 78)", }}>layout2 <img src={logo} alt="logo" width="auto" height="auto" />h1</canvas>
                 <canvas style={{ width: "100%", height: "100%", backgroundColor: "rgb(61, 34, 78)", }} >layout3 <img src={logo} alt="logo" width="auto" height="auto" />h2</canvas>
             </SplitPane>
