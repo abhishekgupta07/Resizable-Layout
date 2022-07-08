@@ -105,19 +105,17 @@ class Editor1 extends Component {
                   Grid2_1: size,
                 });
               }}
-              minSizeG={100}
-              maxSizeG={1200}
+              minSizeG={50}
+              maxSizeG={780}
             />
           ) : num === 3 ? (
             <Threegrid
               option={option2}
               defaultSizepara2={
                 this.state.Grid3_1
-                // parseInt(localStorage.getItem("Grid3_1"), 10)}
               }
               size={
                   this.state.Grid3_1
-                // parseInt(localStorage.getItem("Grid3_1"))
               }
               onChangehandler2={(size) => {
                 this.setState({
@@ -132,7 +130,9 @@ class Editor1 extends Component {
                 });
               }}
               minSizeP1={100}
-              maxSizeP1={1100}
+              maxSizeP1={750}
+              minSizeP12={70}
+              maxSizeP12={700}
             />
           ) : num === 4 ? (
             <SplitPane
@@ -165,8 +165,8 @@ class Editor1 extends Component {
                     () => this.forceUpdate()
                   );
                 }}
-                minSizeG={100}
-                maxSizeG={1200}
+                minSizeG={50}
+                maxSizeG={780}
               />
               <Twogrid
                 option={option2}
@@ -184,7 +184,7 @@ class Editor1 extends Component {
                   );
                 }}
                 minSizeG={100}
-                maxSizeG={1200}
+                maxSizeG={780}
               />
             </SplitPane>
           ) : num === 5 ? (
@@ -218,8 +218,8 @@ class Editor1 extends Component {
                     () => this.forceUpdate()
                   );
                 }}
-                minSizeG={100}
-                maxSizeG={1200}
+                minSizeG={50}
+                maxSizeG={780}
               />
               <Threegrid
                 option={option2}
@@ -249,8 +249,10 @@ class Editor1 extends Component {
                     () => this.forceUpdate()
                   );
                 }}
-                minSizeP1={100}
-                maxSizeP1={1200}
+                minSizeP1={40}
+                maxSizeP1={740}
+                minSizeP12={50}
+                maxSizeP12={740}
               />
             </SplitPane>
           ) : num === 6 ? (
@@ -288,8 +290,10 @@ class Editor1 extends Component {
                   localStorage.getItem("Grid_6_Up2"),
                   10
                 )}
-                minSizeP1={100}
-                maxSizeP1={1150}
+                minSizeP1={50}
+                maxSizeP1={700}
+                minSizeP12={50}
+                maxSizeP12={700}
               />
 
               <Threegrid
@@ -314,17 +318,19 @@ class Editor1 extends Component {
                   10
                 )}
                 option={option2}
-                minSizeP1={100}
-                maxSizeP1={1150}
+                minSizeP1={50}
+                maxSizeP1={700}
+                minSizeP12={50}
+                maxSizeP12={700}
               />
             </SplitPane>
           ) : null}
         </div>
-        {/* <div> */}
-          {/* <button type="submit" onClick={() => this.clicksave()}>
+        <div>
+          <button type="submit" onClick={() => this.clicksave()}>
             Save
-          </button> */}
-        {/* </div> */}
+          </button>
+        </div>
       </div>
     );
   }

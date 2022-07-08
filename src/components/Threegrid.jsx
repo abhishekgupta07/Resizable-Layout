@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import SplitPane from "react-split-pane";
 import Twogrid from './Twogrid';
 let secondpane = "550px";
-function Threegrid({ option, size, defaultSizepara2, onChangehandler2,minSizeP1,maxSizeP1, defaultSizepara, onChangehandler,size2}) {
+function Threegrid({ option, size, defaultSizepara2, onChangehandler2,minSizeP1,maxSizeP1, defaultSizepara, onChangehandler,size2, minSizeP12,
+    maxSizeP12}) {
     return (
         <div>
 
@@ -15,7 +16,8 @@ function Threegrid({ option, size, defaultSizepara2, onChangehandler2,minSizeP1,
                 <Twogrid option={option} 
                 defaultSizepara={defaultSizepara}
                 onChangehandler={onChangehandler}
-                minSizeG={100}
+                minSizeG={minSizeP12}
+                maxSizeG={maxSizeP12}
                 size={size2}
                  />
             </SplitPane>
