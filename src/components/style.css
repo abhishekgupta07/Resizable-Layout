@@ -1,10 +1,6 @@
 .Resizer {
     opacity: 0.5;
-    /* -moz-box-sizing: border-box; */
-    /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;
-    /* -moz-background-clip: padding; */
-   /* -webkit-background-clip: padding; */
     background-clip: padding-box;
   }
    
