@@ -43,7 +43,6 @@
   position: relative;
   top: 20%;
   left: 50%;
-  // background-color: red;
   color: black;
   -webkit-transform: rotate(90deg);
   font-size: 20px;
@@ -55,11 +54,8 @@
   position: relative;
   z-index: 1;
   margin: -5px ;
-  // height: 20px;
-  // margin: auto;
   height: 20px;
   width: auto;
-  // background: #D3CEC4;
   border-top: 5px solid rgba(0, 0, 0, 0);
   border-bottom: 5px solid rgba(0, 0, 0, 0);
   cursor: row-resize;
@@ -79,17 +75,11 @@
   position: absolute;
   top: 20%;
   left: 50%;
-  // padding: 0 8px;
-  // border-radius: 9999px;
   transform: translate(-50%, -50%);
   background-color: red;
   color: black;
-  // border: 1px solid #B8B2A7;
-  // line-height: 0px;
   font-size: 20px;
   letter-spacing: -20px;
-  // display: -webkit-inline-flex;
-  // display: inline-block;
   align-items: center;
 }
 

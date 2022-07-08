@@ -5,7 +5,6 @@ import Editor1 from "./Editor1";
 export class Flexboxbuttons extends Component {
     constructor(props) {
         super(props);
-        // console.log(localStorage.getItem('gridnumber'))
         this.state = {
             gridnumber: JSON.parse(localStorage.getItem('gridnumber')) || 2
         };
