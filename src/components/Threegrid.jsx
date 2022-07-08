@@ -16,7 +16,7 @@ function Threegrid({ option, size, defaultSizepara2, onChangehandler2,minSizeP1,
                 defaultSizepara={defaultSizepara}
                 onChangehandler={onChangehandler}
                 minSizeG={100}
-                size={size}
+                size={size2}
                  />
             </SplitPane>
             {/* </canvas> */}
