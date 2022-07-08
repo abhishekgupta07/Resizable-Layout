@@ -92,7 +92,8 @@ class Editor1 extends Component {
   render() {
     const { num } = this.props;
     return (
-      <div>
+      <div className="parentDiv" >
+        <span style={{ fontSize: "17px", color:"lightgrey", paddingLeft:"12px" }}>Set Windows Orientation and View</span>
         <div className="xyz">
           {num === 2 ? (
             <Twogrid
@@ -110,8 +111,14 @@ class Editor1 extends Component {
           ) : num === 3 ? (
             <Threegrid
               option={option2}
-              defaultSizepara2={parseInt(localStorage.getItem("Grid3_1"), 10)}
-              size={parseInt(localStorage.getItem("Grid3_1"))}
+              defaultSizepara2={
+                this.state.Grid3_1
+                // parseInt(localStorage.getItem("Grid3_1"), 10)}
+              }
+              size={
+                  this.state.Grid3_1
+                // parseInt(localStorage.getItem("Grid3_1"))
+              }
               onChangehandler2={(size) => {
                 this.setState({
                   Grid3_1: size,
@@ -313,11 +320,11 @@ class Editor1 extends Component {
             </SplitPane>
           ) : null}
         </div>
-        <div>
-          <button type="submit" onClick={() => this.clicksave()}>
+        {/* <div> */}
+          {/* <button type="submit" onClick={() => this.clicksave()}>
             Save
-          </button>
-        </div>
+          </button> */}
+        {/* </div> */}
       </div>
     );
   }
