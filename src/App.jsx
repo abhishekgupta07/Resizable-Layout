@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 
 import Flexboxbuttons from "./components/Flexboxbuttons";
 // import Resizablelayout from './components/Resizablelayout';
