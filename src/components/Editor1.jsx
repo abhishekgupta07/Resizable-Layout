@@ -376,9 +376,9 @@ class Editor1 extends Component {
           <button type="submit" onClick={() => this.clicksave()}>
             Save
           </button>
-
         </div>
-        
+        <hr style={{height: "5", width:"400px", float:"right"}}/>
+
 
       </div>
                 

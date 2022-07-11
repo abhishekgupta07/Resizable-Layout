@@ -3,7 +3,7 @@ import "./sideBar.scss";
 export class SideBar extends Component {
   render() {
     return (
-      <div className='sidebarContainer sideBarButtons'>
+      <div className='sidebarContainer sideBarButtons'>      
       <button > Report Driver</button><br/><br/>
       <button> Dicom Viewer</button><br/><br/>
       <button> Annotations</button><br/><br/>

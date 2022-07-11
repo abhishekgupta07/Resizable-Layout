@@ -1,7 +1,7 @@
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import React, { Component } from "react";
 import SideBar from "./SideBar"
-
+import RightSideBar from "./RightSideBar";
 import "./flexbox.scss";
 import Editor1 from "./Editor1";
 export class Flexboxbuttons extends Component {
@@ -93,7 +93,7 @@ export class Flexboxbuttons extends Component {
                     </div>
                 </div>
                 <Editor1 num={this.state.gridnumber} />
-                
+                <RightSideBar/>
             </div>
         );
     }
