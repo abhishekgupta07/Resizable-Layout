@@ -1,22 +1,11 @@
 @import "../App.scss";
 $bgcolor: rgb(61, 34, 78);
 
-
-
-
-    
 .container {
     margin-left: 12em;
     margin-bottom: 10px;
     background: $bgcolor2;
 }
-
-
-
-button:hover{
-    // background: white !important;
-}
-
 .parent-container-flex {
     display: flex;
     flex-direction: row;
@@ -115,11 +104,8 @@ button:hover{
 
 .child-flex-item-3 {
     opacity: 0.1;
-    // margin-top: 10px;
-    // box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 255, 255, 0.701);
     border-radius: 5%;
     text-align: center;
-    // color: white;
     height: 80px;
     flex-basis: 42px;
 }
