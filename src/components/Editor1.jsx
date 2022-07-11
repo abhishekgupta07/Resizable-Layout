@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./style.scss";
+
 import Twogrid from "./Twogrid";
 import Threegrid from "./Threegrid";
 import SplitPane from "react-split-pane";
 let option1 = "horizontal";
 let option2 = "vertical";
+
 
 function twogri() {
   return (
@@ -374,8 +376,13 @@ class Editor1 extends Component {
           <button type="submit" onClick={() => this.clicksave()}>
             Save
           </button>
+
         </div>
+        
+
       </div>
+                
+
     );
   }
 }
