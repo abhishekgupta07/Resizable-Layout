@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./style.scss";
-
+import RightSideBar from "./RightSideBar";
 import Twogrid from "./Twogrid";
 import Threegrid from "./Threegrid";
 import SplitPane from "react-split-pane";
@@ -376,9 +376,11 @@ class Editor1 extends Component {
           <button type="submit" onClick={() => this.clicksave()}>
             Save
           </button>
-        </div>
-        <hr style={{height: "5", width:"400px", float:"right"}}/>
 
+        </div>
+        <br/><br/><br/><br/><br/>
+        {/* <hr style={{height: "5", width:"365px", float:"right"}}/> */}
+        <RightSideBar/>
 
       </div>
                 
