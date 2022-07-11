@@ -1,5 +1,4 @@
 import "./App.scss";
-
 import Flexboxbuttons from "./components/Flexboxbuttons";
 // import Resizablelayout from './components/Resizablelayout';
 // import Flexboxbuttons from './components/Flexboxbuttons';

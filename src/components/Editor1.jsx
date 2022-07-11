@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./style.scss";
+
 import Twogrid from "./Twogrid";
 import Threegrid from "./Threegrid";
 import SplitPane from "react-split-pane";
 let option1 = "horizontal";
 let option2 = "vertical";
+
 
 function twogri() {
   return (
@@ -39,7 +41,7 @@ class Editor1 extends Component {
     super(props);
     this.state = {
       Grid2_1: 
-        JSON.parse(localStorage.getItem("Grid2_1")) || (50 / 100) * 100,
+        parseInt(localStorage.getItem("Grid2_1")) || ((90 / 100) * 100+ "%"),
       Grid3_1: 
         JSON.parse(localStorage.getItem("Grid3_1")) || (50 / 100) * 100,
       Grid3_2: 
@@ -330,8 +332,13 @@ class Editor1 extends Component {
           <button type="submit" onClick={() => this.clicksave()}>
             Save
           </button>
+
         </div>
+        
+
       </div>
+                
+
     );
   }
 }
