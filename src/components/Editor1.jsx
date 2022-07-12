@@ -326,17 +326,15 @@ class Editor1 extends Component {
           <br />
           <RightSideBar />
         </div>
-        <div
-          style={{
-            float: "right",
-            marginTop: "-54px",
-            marginRight: "220px",
-            backgroundColor: "red",
-          }}
-        >
+        <div>
           <button
-            className="submitbtn"
             type="submit"
+            style={{
+              float: "right",
+              marginTop: "-54px",
+              marginRight: "220px",
+            }}
+            id="submitbtn"
             onClick={() => this.clicksave()}
           >
             Save
