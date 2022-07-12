@@ -16,7 +16,7 @@ export class RightSideBar extends Component {
   displayDropDown(content) {
     return (
       <Dropdown>
-        <Dropdown.Toggle >{content}</Dropdown.Toggle>
+        <Dropdown.Toggle variant="transparent" id="padd" className="rounded-pill bg-light bg-opacity-25">{content}</Dropdown.Toggle>
         <Dropdown.Menu>
           <Dropdown.Item href="#">LINK 1</Dropdown.Item>
           <Dropdown.Item href="#">LINK 2</Dropdown.Item>
