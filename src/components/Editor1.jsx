@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./style.scss";
-
+import RightSideBar from "./RightSideBar";
 import Twogrid from "./Twogrid";
 import Threegrid from "./Threegrid";
 import SplitPane from "react-split-pane";
@@ -43,7 +43,7 @@ class Editor1 extends Component {
       Grid2_1:
         JSON.parse(localStorage.getItem("Grid2_1")) || ((50 / 100) * 100) + "%",
       Grid3_1:
-        JSON.parse(localStorage.getItem("Grid3_1")) || ((50 / 100) * 100) + "%",
+        JSON.parse(localStorage.getItem("Grid3_1")) || ((33.3 / 100) * 100) + "%",
       Grid3_2:
         JSON.parse(localStorage.getItem("Grid3_2")) || ((50 / 100) * 100) + "%",
       Grid_4_H:
@@ -57,17 +57,17 @@ class Editor1 extends Component {
       Grid_5_Up1:
         JSON.parse(localStorage.getItem("Grid_5_Up1")) || ((50 / 100) * 100) + "%",
       Grid_5_Dn1:
-        JSON.parse(localStorage.getItem("Grid_5_Dn1")) || ((50 / 100) * 100) + "%",
+        JSON.parse(localStorage.getItem("Grid_5_Dn1")) || ((33.3 / 100) * 100) + "%",
       Grid_5_Dn2:
         JSON.parse(localStorage.getItem("Grid_5_Dn2")) || ((50 / 100) * 100) + "%",
       Grid_6_H:
         JSON.parse(localStorage.getItem("Grid_6_H")) || ((50 / 100) * 100) + "%",
       Grid_6_Up1:
-        JSON.parse(localStorage.getItem("Grid_6_Up1")) || ((50 / 100) * 100) + "%",
+        JSON.parse(localStorage.getItem("Grid_6_Up1")) || ((33.3 / 100) * 100) + "%",
       Grid_6_Up2:
         JSON.parse(localStorage.getItem("Grid_6_Up2")) || ((50 / 100) * 100) + "%",
       Grid_6_Dn1:
-        JSON.parse(localStorage.getItem("Grid_6_Dn1")) || ((50 / 100) * 100) + "%",
+        JSON.parse(localStorage.getItem("Grid_6_Dn1")) || ((33.3 / 100) * 100) + "%",
       Grid_6_Dn2:
         JSON.parse(localStorage.getItem("Grid_6_Dn2")) || ((50 / 100) * 100) + "%",
     };
@@ -112,8 +112,8 @@ class Editor1 extends Component {
                   Grid2_1: size,
                 });
               }}
-              minSizeG={50}
-              maxSizeG={780}
+              minSizeG={150}
+              maxSizeG={700}
             />
           ) : num === 3 ? (
             <Threegrid
@@ -141,10 +141,10 @@ class Editor1 extends Component {
                   Grid3_2: size2,
                 });
               }}
-              minSizeP1={100}
-              maxSizeP1={750}
-              minSizeP12={70}
-              maxSizeP12={700}
+              minSizeP1={150}
+              maxSizeP1={700}
+              minSizeP12={100}
+              maxSizeP12={500}
             />
           ) : num === 4 ? (
             <SplitPane
@@ -165,8 +165,8 @@ class Editor1 extends Component {
                   },
                 );
               }}
-              minSize={20}
-              maxSize={490}
+              minSize={100}
+              maxSize={400}
             >
               <Twogrid
                 option={option2}
@@ -183,8 +183,8 @@ class Editor1 extends Component {
                     },
                   );
                 }}
-                minSizeG={50}
-                maxSizeG={780}
+                minSizeG={150}
+                maxSizeG={700}
               />
               <Twogrid
                 option={option2}
@@ -201,8 +201,8 @@ class Editor1 extends Component {
                     },
                   );
                 }}
-                minSizeG={100}
-                maxSizeG={780}
+                minSizeG={150}
+                maxSizeG={700}
               />
             </SplitPane>
           ) : num === 5 ? (
@@ -221,8 +221,8 @@ class Editor1 extends Component {
                   },
                 );
               }}
-              minSize={20}
-              maxSize={490}
+              minSize={100}
+              maxSize={400}
             >
               <Twogrid
                 option={option2}
@@ -239,8 +239,8 @@ class Editor1 extends Component {
                     },
                   );
                 }}
-                minSizeG={50}
-                maxSizeG={780}
+                minSizeG={150}
+                maxSizeG={700}
               />
               <Threegrid
                 option={option2}
@@ -271,10 +271,10 @@ class Editor1 extends Component {
                     },
                   );
                 }}
-                minSizeP1={40}
-                maxSizeP1={740}
-                minSizeP12={50}
-                maxSizeP12={740}
+                minSizeP1={150}
+                maxSizeP1={700}
+                minSizeP12={100}
+                maxSizeP12={500}
               />
             </SplitPane>
           ) : num === 6 ? (
@@ -328,10 +328,10 @@ class Editor1 extends Component {
                   //   10
                   // )
                 }
-                minSizeP1={50}
+                minSizeP1={150}
                 maxSizeP1={700}
-                minSizeP12={50}
-                maxSizeP12={700}
+                minSizeP12={100}
+                maxSizeP12={500}
               />
 
               <Threegrid
@@ -364,10 +364,10 @@ class Editor1 extends Component {
                   this.state.Grid_6_Dn2
                 }
                 option={option2}
-                minSizeP1={50}
+                minSizeP1={150}
                 maxSizeP1={700}
-                minSizeP12={50}
-                maxSizeP12={700}
+                minSizeP12={100}
+                maxSizeP12={500}
               />
             </SplitPane>
           ) : null}
@@ -378,7 +378,9 @@ class Editor1 extends Component {
           </button>
 
         </div>
-        
+        <br/><br/><br/><br/><br/>
+        {/* <hr style={{height: "5", width:"365px", float:"right"}}/> */}
+        <RightSideBar/>
 
       </div>
                 
