@@ -41,35 +41,35 @@ class Editor1 extends Component {
     super(props);
     this.state = {
       Grid2_1:
-        JSON.parse(localStorage.getItem("Grid2_1")) || ((50 / 100) * 100) + "%",
+        parseInt(localStorage.getItem("Grid2_1")) || ((50 / 100) * 100) + "%",
       Grid3_1:
-        JSON.parse(localStorage.getItem("Grid3_1")) || ((33.3 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid3_1")) || ((33.3 / 100) * 100) + "%",
       Grid3_2:
-        JSON.parse(localStorage.getItem("Grid3_2")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid3_2")) || ((50 / 100) * 100) + "%",
       Grid_4_H:
-        JSON.parse(localStorage.getItem("Grid_4_H")) || ((50 / 100) * 100) + "%",
+        parseInt(localStorage.getItem("Grid_4_H")) || ((50 / 100) * 100) + "%",
       Grid_4_up:
-        JSON.parse(localStorage.getItem("Grid_4_up")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_4_up")) || ((50 / 100) * 100) + "%",
       Grid_4_Dn:
-        JSON.parse(localStorage.getItem("Grid_4_Dn")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_4_Dn")) || ((50 / 100) * 100) + "%",
       Grid_5_H:
-        JSON.parse(localStorage.getItem("Grid_5_H")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_5_H")) || ((50 / 100) * 100) + "%",
       Grid_5_Up1:
-        JSON.parse(localStorage.getItem("Grid_5_Up1")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_5_Up1")) || ((50 / 100) * 100) + "%",
       Grid_5_Dn1:
-        JSON.parse(localStorage.getItem("Grid_5_Dn1")) || ((33.3 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_5_Dn1")) || ((33.3 / 100) * 100) + "%",
       Grid_5_Dn2:
-        JSON.parse(localStorage.getItem("Grid_5_Dn2")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_5_Dn2")) || ((50 / 100) * 100) + "%",
       Grid_6_H:
-        JSON.parse(localStorage.getItem("Grid_6_H")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_6_H")) || ((50 / 100) * 100) + "%",
       Grid_6_Up1:
-        JSON.parse(localStorage.getItem("Grid_6_Up1")) || ((33.3 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_6_Up1")) || ((33.3 / 100) * 100) + "%",
       Grid_6_Up2:
-        JSON.parse(localStorage.getItem("Grid_6_Up2")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_6_Up2")) || ((50 / 100) * 100) + "%",
       Grid_6_Dn1:
-        JSON.parse(localStorage.getItem("Grid_6_Dn1")) || ((33.3 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_6_Dn1")) || ((33.3 / 100) * 100) + "%",
       Grid_6_Dn2:
-        JSON.parse(localStorage.getItem("Grid_6_Dn2")) || ((50 / 100) * 100) + "%",
+      parseInt(localStorage.getItem("Grid_6_Dn2")) || ((50 / 100) * 100) + "%",
     };
   }
   clicksave = () => {
