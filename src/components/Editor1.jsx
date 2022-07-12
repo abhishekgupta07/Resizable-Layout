@@ -92,7 +92,6 @@ class Editor1 extends Component {
   };
 
   render() {
-    console.log(this.state.Grid2_1);
     const { num } = this.props;
     return (
       <div className="parentDiv" >
