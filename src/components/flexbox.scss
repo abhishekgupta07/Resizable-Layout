@@ -11,9 +11,23 @@ $bgcolor: rgb(61, 34, 78);
     flex-direction: row;
     justify-content: space-evenly;
 }
+.active{
+    margin-top: 10px;
+    text-align: center;
+    // color: $bgcolor;
+    height: 100px;
+    flex-basis: 200px;
+    margin-bottom: 10px;
+    background: $bgcolor2;
+    // border-radius: 10px; 
+    // border:10px solid $bgcolorbuttons;
+    border-image: $bgcolorbutton2 10;
+    //  background: $bgcolorbuttons; 
+}
+
 
 .child-container-flex {
-    background-color: $bgcolor2;
+    // background-color: $bgcolor2; 
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -35,7 +49,13 @@ $bgcolor: rgb(61, 34, 78);
     margin-bottom: 10px;
     background: $bgcolor2;
 }
-
+.parent-flex-item:hover {
+    transition: 1s ease-in-out;
+    background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    cursor: pointer;
+}
+// background-color: #7f5a83;
+// background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 .child-flex-item1 {
     opacity: 0.1;
     // margin-top: 10px;   
@@ -62,6 +82,30 @@ $bgcolor: rgb(61, 34, 78);
 }
 
 .child-flex-item4 {
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    border-radius: 5%;
+    text-align: center;
+    // color: white;
+    height: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    // flex-basis: 10px;
+}
+.child-flex-item5 {
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    border-radius: 5%;
+    text-align: center;
+    // color: white;
+    height: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    // flex-basis: 10px;
+}
+.child-flex-item6 {
     display: flex;
     align-content: space-around;
     flex-direction: row;
@@ -101,8 +145,21 @@ $bgcolor: rgb(61, 34, 78);
     margin-right: 10px;
     flex-basis: 62px;
 }
+.child-flex-item6-child {
+    background-color: white;
+    align-content: space-around;
+    opacity: 0.1;
+    margin-top: 5px;
+    border-radius: 5%;
+    text-align: center;
+    color: white;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-basis: 62px;
+}
 
-.child-flex-item-3 {
+.child-flex-item3 {
     opacity: 0.1;
     border-radius: 5%;
     text-align: center;
