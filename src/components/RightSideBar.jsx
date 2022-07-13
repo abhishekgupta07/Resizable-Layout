@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./RightSideBar.scss";
 import "bootstrap/dist/css/bootstrap.css";
-
+import { CgMenu } from "react-icons/cg";
 import Dropdown from "react-bootstrap/Dropdown";
 
 export class RightSideBar extends Component {
@@ -16,12 +16,13 @@ export class RightSideBar extends Component {
   displayDropDown(content) {
     return (
       <Dropdown>
-        <Dropdown.Toggle variant="transparent" id="padd" className="rounded-pill bg-light bg-opacity-25">{content}</Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item href="#">LINK 1</Dropdown.Item>
-          <Dropdown.Item href="#">LINK 2</Dropdown.Item>
-          <Dropdown.Item href="#">LINK 3</Dropdown.Item>
-        </Dropdown.Menu>
+        <Dropdown.Toggle
+          variant="transparent"
+          id="padd"
+          className="rounded-pill bg-light bg-opacity-25"
+        >
+          {content}
+        </Dropdown.Toggle>
       </Dropdown>
     );
   }
@@ -31,14 +32,20 @@ export class RightSideBar extends Component {
       <div
         style={{ display: "block", width: 250, padding: 30, float: "right" }}
       >
+        <hr
+          style={{
+            width: "150px",
+            height: "2px",
+            borderRadius: "10px",
+            color: "white",
+          }}
+        ></hr>
         {this.arr.map((item) => (
           <div className="button">
             {this.displayDropDown(item)}
             <br />
           </div>
         ))}
-
-        {/* <div>{this.displayDropDown()}</div> */}
       </div>
     );
   }
