@@ -42,7 +42,7 @@ const flexdisplay = (a, b, option) => {
       arr.push(<div className={str}>{arr1}</div>);
     }
   }
-  console.log(arr);
+  // console.log(arr);
   return arr;
 };
 export class Flexboxbuttons extends Component {

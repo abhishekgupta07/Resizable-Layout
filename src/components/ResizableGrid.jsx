@@ -101,7 +101,7 @@ class Editor1 extends Component {
   render() {
     const { num } = this.props;
     return (
-      <div>
+      <div> 
         <div className="parentDiv">
           <span
             style={{
@@ -328,7 +328,8 @@ class Editor1 extends Component {
           <br />
           <br />
           <br />
-          <RightSideBar />
+          <RightSideBar gridNumber={num} />
+
         </div>
         <div>
           <button

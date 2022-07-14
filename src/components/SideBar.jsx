@@ -15,7 +15,7 @@ export class SideBar extends Component {
   };
 
   render() {
-    console.log(this.state.buttontype);
+    // console.log(this.state.buttontype);
     return (
       <div className="sidebarContainer sideBarButtons">
         <button
