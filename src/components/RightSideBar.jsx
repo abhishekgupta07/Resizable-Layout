@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./RightSideBar.scss";
 import "bootstrap/dist/css/bootstrap.css";
-import { CgMenu } from "react-icons/cg";
+// import { CgMenu } from "react-icons/cg";
 import Dropdown from "react-bootstrap/Dropdown";
 
 export class RightSideBar extends Component {

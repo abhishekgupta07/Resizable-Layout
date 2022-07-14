@@ -40,6 +40,8 @@ class Editor1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
+      
       Grid2_1:
         parseInt(localStorage.getItem("Grid2_1")) || (50 / 100) * 100 + "%",
       Grid3_1:
@@ -75,6 +77,8 @@ class Editor1 extends Component {
         parseInt(localStorage.getItem("Grid_6_Dn2")) || (50 / 100) * 100 + "%",
     };
   }
+
+
   clicksave = () => {
     alert("save changes");
     localStorage.setItem("Grid2_1", this.state.Grid2_1);
