@@ -2,7 +2,7 @@ import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import React, { Component } from "react";
 import SideBar from "./SideBar";
 import "./flexbox.scss";
-import Editor1 from "./Editor1";
+import Editor1 from "./ResizableGrid";
 const flex = (b, option) => {
   let str = "";
   if (option === "single") {
@@ -42,7 +42,7 @@ const flexdisplay = (a, b, option) => {
       arr.push(<div className={str}>{arr1}</div>);
     }
   }
-  console.log(arr);
+  // console.log(arr);
   return arr;
 };
 export class Flexboxbuttons extends Component {

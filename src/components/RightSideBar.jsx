@@ -1,51 +1,60 @@
 import React, { Component } from "react";
 import "./RightSideBar.scss";
 import "bootstrap/dist/css/bootstrap.css";
-import { CgMenu } from "react-icons/cg";
-import Dropdown from "react-bootstrap/Dropdown";
+import { v4 as uuidv4 } from "uuid";
+import {BsArrowRight} from "react-icons/bs";
+import {GrMenu} from "react-icons/gr";
 
+const dropList = [
+  "--Select--",
+  "Sagittal view",
+  "Axial view",
+  "Select on launch",
+  "Select on launch",
+  "Select on launch",
+  
+];
 export class RightSideBar extends Component {
-  arr = [
-    "Sagittal view",
-    "Axial view",
-    "Select on launch",
-    "Select on launch",
-    "Select on launch",
-  ];
+  dropDownButton = (gridNumber) => {
+    // let gridArray = [];
+    // for (let i = 0; i < gridNumber; i++) {
+    //   gridArray.push(i);
+    // }
+    // return (
+    //   <>
+    //     {gridArray?.map((ele) => (
+    //       <select key={ele}>
+    //         {dropList?.map((item) => (
+    //           <option key={uuidv4()}> {item}</option> //uuid for unique "key" prop
+    //         ))}
+    //       </select>
+    //     ))}
+    //   </>
+    // );
 
-  displayDropDown(content) {
-    return (
-      <Dropdown>
-        <Dropdown.Toggle
-          variant="transparent"
-          id="padd"
-          className="rounded-pill bg-light bg-opacity-25"
-        >
-          {content}
-        </Dropdown.Toggle>
-      </Dropdown>
-    );
-  }
+    const selectDrop = [];
+    for (let i = 0; i < gridNumber; i++) {
+      selectDrop.push(
+        <div className="divA">
+        {i+1} <BsArrowRight className="arrowIcon"/> <select key={i} className= "dropbtn">
+          {dropList.map((item, index) => (
+            <option key={"i" + index} className="dropbtnchoices"> {item}</option>
+          ))}
+        </select>
+        </div>
+        
+      );
+    }
+    return selectDrop;
+  };
 
   render() {
+    const { gridNumber } = this.props;
     return (
-      <div
-        style={{ display: "block", width: 250, padding: 30, float: "right" }}
-      >
-        <hr
-          style={{
-            width: "150px",
-            height: "2px",
-            borderRadius: "10px",
-            color: "white",
-          }}
-        ></hr>
-        {this.arr.map((item) => (
-          <div className="button">
-            {this.displayDropDown(item)}
-            <br />
-          </div>
-        ))}
+      <div className="dropSide">
+        <hr className="horizontalLine"></hr>
+        
+        {this.dropDownButton(gridNumber)}
       </div>
     );
   }
